@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="eng">
-<?php 
-include "Classes/objects.php";
 
-?>
 
 <head>
 <meta charset="utf-8" />
@@ -12,6 +9,7 @@ include "Classes/objects.php";
 </head>
 <h1>Yahtzee Project</h1>
 <body>
+<script src="js/yahtzee.js"></script>
 
 
 
