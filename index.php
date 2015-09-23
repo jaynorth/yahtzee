@@ -10,20 +10,10 @@
 
 <body>
 <h1>Yahtzee Project</h1>
-<!--
-<form name="listDice">
-<input type="checkbox" name="die1"><br>
-<input type="checkbox" name="die2"><br>
-<input type="checkbox" name="die3"><br>
-<input type="checkbox" name="die4"><br>
-<input type="checkbox" name="die4"><br>
 
-
-</form>
--->
-<button id="rollButton">ROLL CLICK HERE</button>
+<button id="rollButton" >ROLL CLICK HERE</button>
 <script src="js/yahtzee.js"></script>
-
+<div id="content"></div>
 
 
 </body

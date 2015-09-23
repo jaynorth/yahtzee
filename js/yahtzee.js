@@ -14,7 +14,7 @@ var Counter = results[0].rollCounter;
 
 
 function print(message){
-	document.write(message);
+	document.getElementById('content').innerHTML = message;
 }
 
 function randomRoll(){
@@ -34,22 +34,24 @@ function rollDice(results){
 }
 
 
-//rollDice(results);
+
+ function displayResults(results){
+ 		var message = 'Results : <br />';
+ 	for (var i=1; i<6; i++){
+ 		message += 'Die number ' ;
+ 		message += results[i].dieNumber + ': '  + results[i].rollResult + '<br />';
+ 	}
+		print(message);
+
+ }
  clickButton.onclick = function(){
  	rollDice(results);
+ 	displayResults(results);
+ 	
  }
+ 
 
 //console.log(results);
-
-
-
-
-
-
-//Roll(results);
-//console.log(results);
-//displayResults(results);
-
 
 /* STEPS REQUIRED
 
