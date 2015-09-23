@@ -23,9 +23,11 @@ function randomRoll(){
 function rollDice(results){
 
 	for (var i=1; i<6; i++){
-		if (results[i].check == 'NULL'){
+		if (results[i].check == 'NULL' || false){
 			results[i].rollResult = randomRoll();
+			results[i].check = false;
 		}
+
 	}
 	results[0].rollCounter +=1;
 	console.log(results);
@@ -39,10 +41,11 @@ function displayResults(results){
  		message += results[i].dieNumber + ': '  + results[i].rollResult + '';
  		//inserting Checkbox
  		message += '<input type="checkbox" id="die' + results[i].dieNumber + '" ';
- 			if (results[i].check == 'NULL'){
+ 			if (results[i].check === false){
  				message += '';
  			} else{
  				message += 'checked="checked"';
+ 				console.log(results[i].check);
  			}
  		message += ' ><br />';
 
