@@ -19,6 +19,8 @@
 
 
 </form>
+
+<button id="rollButton">ROLL CLICK HERE</button>
 <script src="js/yahtzee.js"></script>
 
 

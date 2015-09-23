@@ -21,10 +21,15 @@ function randomRoll(){
 function Roll(results){
 
 	for (var i=1; i<6; i++){
+
+		if (results[i].check == 'NULL'){
 		results[i].rollResult=randomRoll();
-		console.log(results[i]);
-	
+		}
 	}
+	var counter = results[0].rollCounter;
+		counter +=3;
+		console.log(results[i]);
+		console.log(counter);
 
 
 	return results;
@@ -39,8 +44,20 @@ function displayResults(results){
 	}
 
 }
+//console.log(results);
 
-Roll(results);
+function myClickEvent (){
+
+	alert("clicked");
+}
+var clickButton = document.getElementById('rollButton');
+console.log(clickButton);
+
+clickButton.addEventListener("click", Roll(results));
+
+
+
+//Roll(results);
 console.log(results);
 displayResults(results);
 
