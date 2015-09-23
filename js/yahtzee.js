@@ -25,13 +25,26 @@ function firstRoll(){
 	return results;
 }
 
+function showResults(results){
+		var message = '' ;
+	for (var i=1; i<6; i++){
+		message += "Die " + i + " : " + results[i] + "<br />";
+	}
 
+	document.getElementById('content').innerHTML = message;
 
+}
+
+var clickButton = document.getElementById('rollButton');
 var test = firstRoll();
 console.log(test);
+clickButton.onclick = function (){
+	firstRoll();
+	showResults(results);
+}
 
 console.log(Counter);
-
+//showResults(results);
 //rollDice();
 //showResult()
 
