@@ -12,7 +12,6 @@ var clickButton = document.getElementById('rollButton');
 
 var Counter = results[0].rollCounter;
 
-
 function print(message){
 	document.getElementById('content').innerHTML = message;
 }
@@ -33,22 +32,33 @@ function rollDice(results){
 	return results;
 }
 
-
-
- function displayResults(results){
+function displayResults(results){
  		var message = 'Results : <br />';
  	for (var i=1; i<6; i++){
  		message += 'Die number ' ;
- 		message += results[i].dieNumber + ': '  + results[i].rollResult + '<br />';
+ 		message += results[i].dieNumber + ': '  + results[i].rollResult + '';
+ 		//inserting Checkbox
+ 		message += '<input type="checkbox" id="die' + results[i].dieNumber + '" ';
+ 			if (results[i].check == 'NULL'){
+ 				message += '';
+ 			} else{
+ 				message += 'checked="checked"';
+ 			}
+ 		message += ' ><br />';
+
  	}
+ 		message += "<br />Counter is : " + results[0].rollCounter;
 		print(message);
 
  }
+
  clickButton.onclick = function(){
- 	rollDice(results);
- 	displayResults(results);
  	
+ 	rollDice(results);
+ 	displayResults(results); 	
  }
+
+
  
 
 //console.log(results);

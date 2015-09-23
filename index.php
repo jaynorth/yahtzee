@@ -10,8 +10,9 @@
 
 <body>
 <h1>Yahtzee Project</h1>
-
-<button id="rollButton" >ROLL CLICK HERE</button>
+<form>
+	<input type="button" id="rollButton" value="Roll">
+</form>
 <script src="js/yahtzee.js"></script>
 <div id="content"></div>
 
