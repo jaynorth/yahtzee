@@ -1,4 +1,20 @@
+<!doctype html>
+<html lang="eng">
 
+
+<head>
+<meta charset="utf-8" />
+<title>Yahtzee Project OOP</title>
+<link href= rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<h1>Dice Project</h1>
+
+
+<button id="rollButton">ROLL CLICK HERE</button>
+<script >
+	
 var results = [
 {	rollCounter: 0},
 {	dieNumber: 1, rollResult: 'NULL', check: 'NULL'},
@@ -22,52 +38,21 @@ function randomRoll(){
 }
 
 function rollDice(results){
-
 	for (var i=1; i<6; i++){
-		if (results[i].check == 'NULL'){
-			results[i].rollResult = randomRoll();
-		}
+		results[i].rollResult = randomRoll();
 	}
-	results[0].rollCounter +=1;
 	console.log(results);
 	return results;
 }
 
 
 //rollDice(results);
- clickButton.onclick = function(){
- 	rollDice(results);
- }
+ clickButton.onclick = rollDice(results);
 
-//console.log(results);
 
+</script>
 
 
 
-
-
-//Roll(results);
-//console.log(results);
-//displayResults(results);
-
-
-/* STEPS REQUIRED
-
-Roll 1, Throw all Dices
-	With RandomGenerator
-Roll 2, 
-	Analyse Dice, 
-	Show Combinations
-	Choose What to keep (checkboxes)
-	THrow again or stop?
-Roll 3, 
-	Throw Remaining
-	Analyse Dice
-	Show Combination
-	Choose
-
-Submit Result into Table
-
-
-*/
-
+</body
+></html>
