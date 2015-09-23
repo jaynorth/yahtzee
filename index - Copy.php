@@ -10,8 +10,9 @@ include "Classes/objects.php";
 <title>Yahtzee Project OOP</title>
 <link href= rel='stylesheet' type='text/css'>
 </head>
-<h1>Yahtzee Project</h1>
+
 <body>
+<h1>Yahtzee Project</h1>
 <div style="float:left;"	>
 
 

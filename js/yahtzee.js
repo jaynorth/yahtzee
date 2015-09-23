@@ -1,4 +1,7 @@
 
+var results =[]  ;
+var rollCount;
+
 function print(message){
 
 	document.write(message);
@@ -19,13 +22,30 @@ function resultMessage(dieNumber){
 	print(message);
 }
 
-function firstRoll(){
+function Roll(results){
+
 	for (var i=1; i<6; i++){
-		resultMessage(i);
+		results[i]=randomRoll();
+		console.log(results[i]);
 	}
+
+	return results;
 }
 
-firstRoll();
+function displayResults(results){
+
+	for (var i=1; i<6; i++){
+		message = 'Die ' + i + ': ' + results[i];
+		message += '<br />';
+		print(message);
+	}
+
+}
+
+Roll(results);
+console.log(results);
+displayResults(results);
+
 
 /* STEPS REQUIRED
 
