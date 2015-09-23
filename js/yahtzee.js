@@ -5,6 +5,7 @@ var die2;
 var die3;
 var die4;
 var die5;
+var dieNumber;
 
 
 function print(message){
@@ -12,9 +13,9 @@ function print(message){
 	document.write(message);
 }
 
-var message = "Welcome to Yahtzee in Javascript";
+//var message = "Welcome to Yahtzee in Javascript ";
 
-print(message);
+//print(message);
 
 function randomRoll(){
 
@@ -22,9 +23,40 @@ function randomRoll(){
 
 }
 
-die1 = randomRoll();
+function resultMessage(dieNumber){
+	
+	message = 'die number: ' 
+	message += dieNumber;
+	message += " You threw a ";
+	message += randomRoll();
+	message += '<br />'
+	
 
-message = "You throwed a ";
-message += die1
+	print(message);
 
-print(message);
+}
+
+//die1 = randomRoll();
+for (var i=1; i<6; i++){
+	resultMessage(i);
+}
+
+/* STEPS REQUIRED
+
+Roll 1, Throw all Dices
+	With RandomGenerator
+Roll 2, 
+	Analyse Dice, 
+	Show Combinations
+	Choose What to keep (checkboxes)
+	THrow again or stop?
+Roll 3, 
+	Throw Remaining
+	Analyse Dice
+	Show Combination
+	Choose
+
+Submit Result into Table
+
+
+*/
