@@ -14,7 +14,10 @@
 	<input type="button" id="rollButton" value="Roll">
 </form>
 <script src="js/yahtzee.js"></script>
-<div id="content"></div>
+<div id="content">
+	
+	
+</div>
 
 
 </body

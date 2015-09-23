@@ -23,14 +23,15 @@ function randomRoll(){
 function rollDice(results){
 
 	for (var i=1; i<6; i++){
-		if (results[i].check == 'NULL' || false){
+		if (results[i].check == 'NULL' || 'false'){
+			console.log(results[i].check);
 			results[i].rollResult = randomRoll();
 			results[i].check = false;
 		}
 
 	}
 	results[0].rollCounter +=1;
-	console.log(results);
+	//console.log(results);
 	return results;
 }
 
@@ -40,29 +41,39 @@ function displayResults(results){
  		message += 'Die number ' ;
  		message += results[i].dieNumber + ': '  + results[i].rollResult + '';
  		//inserting Checkbox
- 		message += '<input type="checkbox" id="die' + results[i].dieNumber + '" ';
- 			if (results[i].check === false){
- 				message += '';
- 			} else{
- 				message += 'checked="checked"';
- 				console.log(results[i].check);
- 			}
- 		message += ' ><br />';
-
+ 		message += '<input type="checkbox" onclick="checkStatusBox(this)" id="' + results[i].dieNumber + '" ';
+	 	message += ' ><br />';
  	}
  		message += "<br />Counter is : " + results[0].rollCounter;
 		print(message);
-
+		return results;
  }
 
+ function checkStatusBox(checkbox){
+ 	console.log(checkbox.id);
+    if (checkbox.checked===true){
+    	console.log(checkbox.checked);
+    	results[checkbox.id].check = true;
+    	console.log(results[checkbox.id].check);
+    }else{
+
+    	console.log(checkbox.checked);
+    	results[checkbox.id].check = false;
+    	console.log(results[checkbox.id].check)
+    }
+   // console.log(results);
+    return results;
+ }
+
+
+
  clickButton.onclick = function(){
- 	
+ 	console.log(results);
  	rollDice(results);
  	displayResults(results); 	
  }
 
 
- 
 
 //console.log(results);
 
