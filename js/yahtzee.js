@@ -1,4 +1,7 @@
 
+
+
+/*
 var results = [
 {	rollCounter: 0},
 {	dieNumber: 1, rollResult: 'NULL', check: 'NULL'},
@@ -68,7 +71,7 @@ function displayResults(results){
 
 
  clickButton.onclick = function(){
- 	console.log(results);
+ 	//console.log(results);
  	rollDice(results);
  	displayResults(results); 	
  }
@@ -76,7 +79,7 @@ function displayResults(results){
 
 
 //console.log(results);
-
+*/
 /* STEPS REQUIRED
 
 Roll 1, Throw all Dices
