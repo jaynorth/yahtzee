@@ -1,4 +1,39 @@
 
+var Counter ;
+var results =[];
+
+function rollDice(){
+console.log("rollDice");
+randomRoll();
+}
+
+function showResult(){
+console.log("showResult");
+}
+
+function randomRoll(){
+	console.log('randomRoll');
+	return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+}
+
+function firstRoll(){
+	console.log('firstRoll');
+	for (var i=1; i<6; i++){
+		results[i]=randomRoll();
+	}
+	//Counter++;
+	return results;
+}
+
+
+
+var test = firstRoll();
+console.log(test);
+
+console.log(Counter);
+
+//rollDice();
+//showResult()
 
 
 /*
