@@ -7,15 +7,10 @@ var die4;
 var die5;
 var dieNumber;
 
-
 function print(message){
 
 	document.write(message);
 }
-
-//var message = "Welcome to Yahtzee in Javascript ";
-
-//print(message);
 
 function randomRoll(){
 
@@ -24,22 +19,23 @@ function randomRoll(){
 }
 
 function resultMessage(dieNumber){
-	
 	message = 'die number: ' 
 	message += dieNumber;
 	message += " You threw a ";
 	message += randomRoll();
 	message += '<br />'
 	
-
 	print(message);
 
 }
 
-//die1 = randomRoll();
-for (var i=1; i<6; i++){
-	resultMessage(i);
+function firstRoll(){
+	for (var i=1; i<6; i++){
+		resultMessage(i);
+	}
 }
+
+firstRoll();
 
 /* STEPS REQUIRED
 
