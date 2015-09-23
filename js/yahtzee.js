@@ -1,32 +1,22 @@
 
-
-var die1;
-var die2;
-var die3;
-var die4;
-var die5;
-var dieNumber;
-
 function print(message){
 
 	document.write(message);
 }
 
 function randomRoll(){
-
 	return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-
 }
 
 function resultMessage(dieNumber){
 	message = 'die number: ' 
 	message += dieNumber;
 	message += " You threw a ";
+
 	message += randomRoll();
 	message += '<br />'
 	
 	print(message);
-
 }
 
 function firstRoll(){
@@ -56,3 +46,4 @@ Submit Result into Table
 
 
 */
+
