@@ -1,6 +1,7 @@
 
-var Counter ;
-var results =[];
+var Counter = 0;
+var results =[0, 0, 0, 0, 0, 0];
+var hold = [false, false, false, false, false, false];
 
 function rollDice(){
 console.log("rollDice");
@@ -16,35 +17,53 @@ function randomRoll(){
 	return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 }
 
-function Roll(){
+function Roll(results, hold){
 	console.log('Roll');
 	for (var i=1; i<6; i++){
-		results[i]=randomRoll();
+		if(hold[i]==false){
+			results[i]=randomRoll();
+		}
 	}
 	//Counter++;
 	return results;
 }
 
-function showResults(results){
-		var message = '' ;
+
+
+function showResults(results, hold){
+		Counter++;
+
+		var message = 'Counter : ' + Counter + '<br />' ;
 
 	for (var i=1; i<6; i++){
 		message += "Die " + i + " : <img src='img/" + results[i] + ".png' height=50 />";
+		if (hold[i]==false && Counter<3 ){
+			message += "<button id='" + i + "' onclick='holdIT("+ i +")' >Hold?</button>"; 
+
+		}
+
 	}
 
 	document.getElementById('content').innerHTML = message;
 
 }
+function holdIT(i){
+	//document.getElementById('i')
+	hold[i]=true;
 
-var clickButton = document.getElementById('rollButton');
-var test = Roll();
-console.log(test);
-clickButton.onclick = function (){
-	Roll();
-	showResults(results);
+
 }
 
-console.log(Counter);
+
+var clickButton = document.getElementById('rollButton');
+//var test = Roll();
+//console.log(test);
+clickButton.onclick = function (){
+	Roll(results, hold);
+	showResults(results, hold);
+}
+
+//console.log(Counter);
 //showResults(results);
 //rollDice();
 //showResult()
