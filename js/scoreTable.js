@@ -1,27 +1,87 @@
   
 
+var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 
-
-  function initElement()  
+  function initElement(Identifiers)  
     {  
-        var p = document.getElementById("one");  
+       // for (var i=0; i<6; i++){
+            
+        var a = document.getElementById(Identifiers[0]);  
 
-        p.onmouseover = showMouseOver;
-        p.onmouseout = showMouseOut;
+        a.onmouseover = showMouseOver;
+        a.onmouseout = showMouseOut;
+/*
+        var b = document.getElementById(Identifiers[1]);  
+
+        b.onmouseover = showMouseOver;
+        b.onmouseout = showMouseOut;
+
+        var c = document.getElementById(Identifiers[2]);  
+
+        c.onmouseover = showMouseOver;
+        c.onmouseout = showMouseOut;
+
+        var d = document.getElementById(Identifiers[3]);  
+
+        d.onmouseover = showMouseOver;
+        d.onmouseout = showMouseOut;
+
+        var e = document.getElementById(Identifiers[4]);  
+
+        e.onmouseover = showMouseOver;
+        e.onmouseout = showMouseOut;
+
+        var f = document.getElementById(Identifiers[5]);  
+
+        f.onmouseover = showMouseOver;
+        f.onmouseout = showMouseOut;
+        //}
+*/
     };  
 
     function showMouseOver()  
     {  
-        var notice = document.getElementById("one");
-        notice.innerHTML = sumForNum(results, 1);
+        //console.log(Identifiers);
+        var notice1 = document.getElementById("ace");
+        notice1.innerHTML = sumForNum(results, 1);
+/*
+        var notice2 = document.getElementById("twos");
+        notice2.innerHTML = sumForNum(results, 2);
 
+        var notice3 = document.getElementById("threes");
+        notice3.innerHTML = sumForNum(results, 3);
+
+         var notice4 = document.getElementById("fours");
+        notice4.innerHTML = sumForNum(results, 4);
+
+        var notice5 = document.getElementById("fives");
+        notice5.innerHTML = sumForNum(results, 5);
+
+        var notice6 = document.getElementById("sixes");
+        notice6.innerHTML = sumForNum(results, 6);
+*/
     }
     
     function showMouseOut()
     {
-        var notice = document.getElementById("one");
-        notice.innerHTML = 'out';
-        
+        var notice1 = document.getElementById("ace");
+        notice1.innerHTML = 'out';
+/*
+        var notice2 = document.getElementById("twos");
+        notice2.innerHTML = 'out';
+
+        var notice3 = document.getElementById("threes");
+        notice3.innerHTML = 'out';
+
+        var notice4 = document.getElementById("fours");
+        notice4.innerHTML = 'out';
+
+        var notice5 = document.getElementById("fives");
+        notice5.innerHTML = 'out';
+
+        var notice6 = document.getElementById("sixes");
+        notice6.innerHTML = 'out';
+    */    
     }
 
 // Function for adding upper section
