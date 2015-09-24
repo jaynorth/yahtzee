@@ -16,8 +16,8 @@ function randomRoll(){
 	return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 }
 
-function firstRoll(){
-	console.log('firstRoll');
+function Roll(){
+	console.log('Roll');
 	for (var i=1; i<6; i++){
 		results[i]=randomRoll();
 	}
@@ -27,8 +27,9 @@ function firstRoll(){
 
 function showResults(results){
 		var message = '' ;
+
 	for (var i=1; i<6; i++){
-		message += "Die " + i + " : " + results[i] + "<br />";
+		message += "Die " + i + " : <img src='img/" + results[i] + ".png' height=50 />";
 	}
 
 	document.getElementById('content').innerHTML = message;
@@ -36,10 +37,10 @@ function showResults(results){
 }
 
 var clickButton = document.getElementById('rollButton');
-var test = firstRoll();
+var test = Roll();
 console.log(test);
 clickButton.onclick = function (){
-	firstRoll();
+	Roll();
 	showResults(results);
 }
 
