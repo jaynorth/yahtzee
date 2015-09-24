@@ -2,6 +2,7 @@
 var Counter = 0;
 var results =[0, 0, 0, 0, 0, 0];
 var hold = [false, false, false, false, false, false];
+var clickButton = document.getElementById('rollButton');
 
 function rollDice(){
 console.log("rollDice");
@@ -18,6 +19,7 @@ function randomRoll(){
 }
 
 function Roll(results, hold){
+
 	console.log('Roll');
 	for (var i=1; i<6; i++){
 		if(hold[i]==false){
@@ -29,6 +31,10 @@ function Roll(results, hold){
 }
 
 function showResults(results, hold){
+	if (Counter==3){
+		console.log('STOP');
+		clickButton.type ="hidden";  // = "Beeitch";
+	}
 		
 		var message = 'Counter : ' + Counter + '<br />' ;
 
@@ -61,7 +67,7 @@ function keep(i, status){
 
 }
 
-var clickButton = document.getElementById('rollButton');
+
 clickButton.onclick = function (){
 	Roll(results, hold);
 	showResults(results, hold);
