@@ -24,28 +24,40 @@ function Roll(results, hold){
 			results[i]=randomRoll();
 		}
 	}
+	Counter++;
 	return results;
 }
 
 function showResults(results, hold){
-		Counter++;
+		
 		var message = 'Counter : ' + Counter + '<br />' ;
 
 	for (var i=1; i<6; i++){
 		message += "Die " + i + " : <img src='img/" + results[i] + ".png' height=50 />";
 		if (hold[i]==false && Counter<3 ){
-			message += "<button id='" + i + "' onclick='keep("+ i +")' >Hold?</button>"; 
+			//var status = true;
+			message += "<button id='" + i + "' onclick='keep("+ i +", true)' >Hold?</button>"; 
 
+		}else if (hold[i]==true && Counter<3 ){
+			//var status = false;
+			message += "<button id='" + i + "' onclick='keep("+ i +", false)' >UnHold?</button>";
 		}
 
 	}
 	document.getElementById('content').innerHTML = message;
 }
 
-function keep(i){
+function keep(i, status){
 	//document.getElementById('i')
-	hold[i]=true;
-
+	hold[i]=status;
+	if (status===true){
+		document.getElementById(i).innerHTML="Unhold?";
+		showResults(results, hold);
+	}
+	else if(status===false){
+		document.getElementById(i).innerHTML="Hold?";
+		showResults(results, hold);
+	}
 
 }
 
