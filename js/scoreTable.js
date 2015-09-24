@@ -2,20 +2,20 @@
 
 var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 
-  function initElement(Identifiers)  
+  function initElement()  
     {  
        // for (var i=0; i<6; i++){
             
-        var a = document.getElementById(Identifiers[0]);  
+        var a = document.getElementById("ace");  
 
         a.onmouseover = showMouseOver;
         a.onmouseout = showMouseOut;
-/*
-        var b = document.getElementById(Identifiers[1]);  
+
+        var b = document.getElementById("twos");  
 
         b.onmouseover = showMouseOver;
         b.onmouseout = showMouseOut;
-
+/*
         var c = document.getElementById(Identifiers[2]);  
 
         c.onmouseover = showMouseOver;
@@ -30,11 +30,12 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 
         e.onmouseover = showMouseOver;
         e.onmouseout = showMouseOut;
-
-        var f = document.getElementById(Identifiers[5]);  
+*/
+        var f = document.getElementById("sixes");  
 
         f.onmouseover = showMouseOver;
         f.onmouseout = showMouseOut;
+/*
         //}
 */
     };  
@@ -44,10 +45,10 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
         //console.log(Identifiers);
         var notice1 = document.getElementById("ace");
         notice1.innerHTML = sumForNum(results, 1);
-/*
+
         var notice2 = document.getElementById("twos");
         notice2.innerHTML = sumForNum(results, 2);
-
+/*
         var notice3 = document.getElementById("threes");
         notice3.innerHTML = sumForNum(results, 3);
 
@@ -56,9 +57,10 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 
         var notice5 = document.getElementById("fives");
         notice5.innerHTML = sumForNum(results, 5);
-
+*/
         var notice6 = document.getElementById("sixes");
         notice6.innerHTML = sumForNum(results, 6);
+/*
 */
     }
     
@@ -66,10 +68,10 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
     {
         var notice1 = document.getElementById("ace");
         notice1.innerHTML = 'out';
-/*
+
         var notice2 = document.getElementById("twos");
         notice2.innerHTML = 'out';
-
+/*
         var notice3 = document.getElementById("threes");
         notice3.innerHTML = 'out';
 
@@ -78,10 +80,11 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 
         var notice5 = document.getElementById("fives");
         notice5.innerHTML = 'out';
-
+*/
         var notice6 = document.getElementById("sixes");
         notice6.innerHTML = 'out';
-    */    
+    
+       
     }
 
 // Function for adding upper section
