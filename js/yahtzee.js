@@ -1,6 +1,6 @@
 
 var Counter = 0;
-var results =[0, 0, 0, 0, 0, 0];
+var results =[0, 0, 0, 0, 0, 0];//index 0 is not used
 var hold = [false, false, false, false, false, false];
 var clickButton = document.getElementById('rollButton');
 
@@ -33,13 +33,13 @@ function Roll(results, hold){
 function showResults(results, hold){
 	if (Counter==3){
 		console.log('STOP');
-		clickButton.type ="hidden";  // = "Beeitch";
+		clickButton.type ="hidden"  
 	}
 		
 		var message = 'Counter : ' + Counter + '<br />' ;
 
 	for (var i=1; i<6; i++){
-		message += "Die " + i + " : <img src='img/" + results[i] + ".png' height=50 />";
+		message += "Die " + i + "  <img src='img/" + results[i] + ".png' height=50 />";
 		if (hold[i]==false && Counter<3 ){
 			//var status = true;
 			message += "<button id='" + i + "' onclick='keep("+ i +", true)' >Hold?</button>"; 
@@ -51,6 +51,7 @@ function showResults(results, hold){
 
 	}
 	document.getElementById('content').innerHTML = message;
+	analysing(results);//function is in alaysis.js
 }
 
 function keep(i, status){
@@ -72,4 +73,6 @@ clickButton.onclick = function (){
 	Roll(results, hold);
 	showResults(results, hold);
 }
+
+
 
