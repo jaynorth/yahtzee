@@ -55,7 +55,7 @@ function showResults(results, hold){
 
 	}
 	document.getElementById('content').innerHTML = message;
-	analysing(results);//function is in alaysis.js
+	//analysing(results);//function is in alaysis.js
 }
 
 function keep(i, status){

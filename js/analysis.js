@@ -1,3 +1,5 @@
+
+/*
 scoreTable = [
 	{one:''}, 
 	{two:''},
@@ -16,3 +18,4 @@ function analysing(results){
 
 }
 
+*/

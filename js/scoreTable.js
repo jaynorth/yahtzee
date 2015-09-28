@@ -4,13 +4,7 @@ var Identifiers=["ace", "twos", "threes", "fours", "fives", "sixes"];
 var score = [];
 var scoreCounter= 0; //max 13, ends at 13
 
-/*
-function initElement(){
-var a = document.getElementById('ace');
-a.onmouseover = showMouseover(id, num);
-//a.onmouseout = showMouseOut;
-}
-*/
+
 function showMouseover(id, num){
     //alert(id);
     var b= document.getElementById(id);
@@ -54,7 +48,13 @@ reset();
 
 function reset(){
     console.log('reseting');
-    results =[0, 0, 0, 0, 0, 0];
+    
     Counter=0;
     console.log(Counter);
+    clickButton.type ="button"  ;
+    results =[0, 0, 0, 0, 0, 0];
+    hold = [false, false, false, false, false, false];
+    document.getElementById('content').innerHTML = '';
+    
+
 }
