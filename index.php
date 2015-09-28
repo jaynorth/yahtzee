@@ -31,22 +31,22 @@
 		<td>UPPER SECTION</td><td>HOW TO SCORE</td><td>score</td>		
 	</tr>
 	<tr>
-		<td>ACE</td><td>COUNT and add</td><td id="ace" onmouseover="showMouseover('ace', 1)" > </td>	
+		<td>ACE</td><td>COUNT and add</td><td id="ace" onmouseover="showMouseover('ace', 1)" onmouseout="showMouseOut('ace')"> </td>	
 	</tr>
 	<tr>
-		<td>TWOs</td><td>COUNT and add</td><td id="twos" onmouseover="showMouseover('twos', 2)" onmouseout="showMouseOut('twos')" ></td>		
+		<td>TWOs</td><td>COUNT and add</td><td id="twos" onmouseover="showMouseover('twos', 2)" onmouseout="showMouseOut('twos')" onclick="alert('click')"></td>		
 	</tr>
 	<tr>
-		<td>Threes</td><td>COUNT and add</td><td id="threes" onmouseover="showMouseover('threes', 3)"></td>	
+		<td>Threes</td><td>COUNT and add</td><td id="threes" onmouseover="showMouseover('threes', 3)" onmouseout="showMouseOut('threes')"></td>	
 	</tr>
 	<tr>
-		<td>Fours</td><td>COUNT and add</td><td id="fours" ></td>		
+		<td>Fours</td><td>COUNT and add</td><td id="fours" onmouseover="showMouseover('fours', 4)" onmouseout="showMouseOut('fours')"></td>		
 	</tr>
 	<tr>
-		<td>Fives</td><td>COUNT and add</td><td id="fives"></td>	
+		<td>Fives</td><td>COUNT and add</td><td id="fives" onmouseover="showMouseover('fives', 5)" onmouseout="showMouseOut('fives')"></td>	
 	</tr>
 	<tr>
-		<td>Sixes</td><td>COUNT and add</td><td id="sixes"></td>	
+		<td>Sixes</td><td>COUNT and add</td><td id="sixes" onmouseover="showMouseover('sixes', 6)" onmouseout="showMouseOut('sixes')"></td>	
 	</tr>
 	<tr>
 		<td>BONUS</td><td>if total is 63 or over</td><td></td>		

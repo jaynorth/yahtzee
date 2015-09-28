@@ -13,6 +13,7 @@ function showMouseover(id, num){
     //alert(id);
     var b= document.getElementById(id);
     b.innerHTML = sumForNum(results, num);
+    
 
 }
 
