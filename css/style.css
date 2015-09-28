@@ -2,3 +2,23 @@
 	float:left;
 
 }
+
+button {
+
+	color: orange;
+
+}
+
+table {
+
+	/*border: 1000px;*/
+
+	background-color: green;
+	font-family: arial;
+	border-radius: 5px;
+	color:white;
+}
+
+button, #rollButton {
+	border-radius: 5px;
+}

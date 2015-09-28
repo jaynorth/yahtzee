@@ -9,7 +9,7 @@
 
 </head>
 
-<body onload="initElement();">
+<body > <!-- onload="initElement();" -->
 <h1>Yahtzee Project</h1>
 <form>
 	<input type="button" id="rollButton" value="Roll">
@@ -31,16 +31,16 @@
 		<td>UPPER SECTION</td><td>HOW TO SCORE</td><td>score</td>		
 	</tr>
 	<tr>
-		<td>ACE</td><td>COUNT and add</td><td id="ace"> </td>	
+		<td>ACE</td><td>COUNT and add</td><td id="ace" onmouseover="showMouseover('ace', 1)" > </td>	
 	</tr>
 	<tr>
-		<td>TWOs</td><td>COUNT and add</td><td id="twos"></td>		
+		<td>TWOs</td><td>COUNT and add</td><td id="twos" onmouseover="showMouseover('twos', 2)" onmouseout="showMouseOut('twos')" ></td>		
 	</tr>
 	<tr>
-		<td>Threes</td><td>COUNT and add</td><td id="threes"></td>	
+		<td>Threes</td><td>COUNT and add</td><td id="threes" onmouseover="showMouseover('threes', 3)"></td>	
 	</tr>
 	<tr>
-		<td>Fours</td><td>COUNT and add</td><td id="fours"></td>		
+		<td>Fours</td><td>COUNT and add</td><td id="fours" ></td>		
 	</tr>
 	<tr>
 		<td>Fives</td><td>COUNT and add</td><td id="fives"></td>	
