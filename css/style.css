@@ -8,6 +8,11 @@ img{
 	float:left;
 }
 
+#content{
+
+	/*width:300px;*/
+}
+
 button {
 
 	color: orange;
@@ -28,6 +33,11 @@ table {
 	font-family: arial;
 	border-radius: 5px;
 	color:white;
+}
+
+td.scoredata:hover{
+
+	border-color:red;
 }
 
 button, #rollButton {
