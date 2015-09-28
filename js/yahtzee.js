@@ -39,7 +39,9 @@ function showResults(results, hold){
 		var message = 'Counter : ' + Counter + '<br />' ;
 
 	for (var i=1; i<6; i++){
-		message += "Die " + i + "  <img src='img/" + results[i] + ".png' height=50 />";
+		//message += "Die " + i + 
+		message += "<div class='box'>";
+		message += "  <img src='img/" + results[i] + ".png' height=50 />";
 		if (hold[i]==false && Counter<3 ){
 			//var status = true;
 			message += "<button id='" + i + "' onclick='keep("+ i +", true)' >Hold?</button>"; 
@@ -48,6 +50,8 @@ function showResults(results, hold){
 			//var status = false;
 			message += "<button id='" + i + "' onclick='keep("+ i +", false)' >UnHold?</button>";
 		}
+
+		message += "</div>";
 
 	}
 	document.getElementById('content').innerHTML = message;

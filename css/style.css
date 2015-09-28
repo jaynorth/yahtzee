@@ -3,10 +3,21 @@
 
 }
 
+img{
+
+	float:left;
+}
+
 button {
 
 	color: orange;
+	float:left;
 
+}
+
+.box{
+	float:left;
+	width:80px;
 }
 
 table {
