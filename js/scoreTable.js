@@ -94,22 +94,30 @@ function checkDiceHand(object){
     console.log('check dice hand');
     var fullHouse=0;
     var straightCheck=0;
+    var threeOfaKind=0;
+    var fourOfaKind=0;
+    var Yahtzee=0;
+    var keyList=[];
 
     for (var key in object){
-
+        keyList.push(key);
         var value = object[key];
         console.log(key + ': ' +value);
+
         if (value==5){
             console.log('yahtzee');
+            Yahtzee+=1;
             break;
         }
         if (value==4){
             console.log('four of a kind');
+            fourOfaKind+=1;
             break;
         }
         if (value==3){
             console.log('Three of a kind');
             fullHouse +=1;
+            threeOfaKind+=1;
         }
         if (value==2){
             console.log('Pair');
@@ -122,16 +130,22 @@ function checkDiceHand(object){
         }
 
        
-
+        
 
 
     }
+
+    console.log('keylist is :' + keyList);
+    console.log('straightcheck is ' +straightCheck);
 
     if (fullHouse==2){
         console.log('full House');
     }
-    if (straightCheck==5){
-        console.log('possible straight');
+    if (straightCheck>=3 || keyList==[2, 3, 4, 5] || keyList==[1, 2, 3, 4] || keyList==[3, 4, 5, 6] ){
+        console.log('SMALL STRAIGHT : ' + keyList);
+    }
+    if (straightCheck==5 ){
+        console.log('BIG STRAIGHT : ' + keyList);
     }
 
 
