@@ -1,4 +1,3 @@
-
 /*
 scoreTable = [
 	{one:''}, 
@@ -7,7 +6,7 @@ scoreTable = [
 ]
 
 
-var analyse = "<h2>test div</h2>";
+var analyse = check3ofKind(results);
 document.getElementById('analysis').innerHTML = analyse;
 
 

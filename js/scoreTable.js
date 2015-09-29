@@ -67,3 +67,27 @@ function reset(){
     
 
 }
+
+
+
+var occurence = [0,6,7,4,4,4,3,2,2,1,4];
+
+function checkOccurence(array){
+    var obj = {};
+console.log('checking occurences');
+
+for (var i=0; i<array.length; i++){
+    
+   if (obj[array[i]]){
+    obj[array[i]]++;
+   } else {
+      obj[array[i]] = 1;
+   } 
+  
+}
+console.log(obj);
+
+
+}
+
+checkOccurence(occurence);
