@@ -191,10 +191,10 @@ function checkDiceHand(object){
 /////                  lower SECTION
 ///////////////////////////////////////////////////////////////////////////////
 
-function LowerMouseOver(id){
-
+function LowerMouseOver(id, property){
+    console.log('processing LowerMouseOver');
     var b= document.getElementById(id);
-    if (score[id]==undefined && Counter>0){
+    if (score[id]==undefined && Counter>0 && CurrentDiceHand.property==true){
         b.innerHTML = AddAllNumbers(results);
     }
 }
