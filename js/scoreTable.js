@@ -38,7 +38,7 @@ function sumForNum(results, number){
     }
 
 function addToScore(id, num){
-    if (Counter>0){
+    if (Counter>0 && score[id]==undefined){
     console.log('Adding to Score');
     //console.log('Counter is ' + Counter);
     var points = sumForNum(results, num);
