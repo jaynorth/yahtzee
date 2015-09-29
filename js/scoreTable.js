@@ -148,15 +148,13 @@ function checkDiceHand(object){
 
     if (straightCheck==5){
         console.log('straightcheck = 5');
-        console.log(keyList[0]);
-        console.log(keyList[4]);
         var a = keyList[0];
         console.log('following is var a ');
         console.log(a+4);
         var b = keyList[4];
         if (b == a+4){
             console.log('It is a Big Straight !!!!');
-        }else if (keyList.toString()==[1, 2, 3, 4, 6 ].toString() || keyList.toString()===[1, 3, 4, 5, 6].toString() ){
+        }else if (keyList.toString()==[1, 2, 3, 4, 6 ].toString() || keyList.toString()===[1, 3, 4, 5, 6].toString() ){ //had to convert both to string to make it work, don't know why??
             console.log('We got a small straight, no pair!!!');
         }else{
             console.log('We got no small straight with no pair!');
@@ -179,3 +177,24 @@ function checkDiceHand(object){
 
 };
 
+////////////////////////////////////////////////////////////////////////////////
+/////                  lower SECTION
+///////////////////////////////////////////////////////////////////////////////
+
+function LowerMouseOver(id){
+
+    var b= document.getElementById(id);
+    if (score[id]==undefined && Counter>0){
+        b.innerHTML = AddAllNumbers(results);
+    }
+}
+
+function AddAllNumbers(results){
+    console.log('add all numbers');
+    var sum = 0;
+    for (var i=0; i<results.length;i++){
+        sum += results[i];
+    }
+    return sum;
+
+}

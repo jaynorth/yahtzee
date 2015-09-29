@@ -60,7 +60,7 @@
 		<td>LOWER SECTION</td><td></td><td></td>		
 	</tr>
 	<tr>
-		<td>3 of a kind</td><td>Add Total of All Dice</td><td></td>		
+		<td>3 of a kind</td><td>Add Total of All Dice</td><td class="scoredata" id="threeKind" onmouseover="LowerMouseOver('threeKind')" onmouseout="showMouseOut('threeKind')" onclick="addToScore('threeKind', 5)"></td>		
 	</tr>
 	<tr>
 		<td>4 of a kind</td><td>Add Total of All Dice</td><td></td>	
