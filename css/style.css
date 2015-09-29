@@ -3,14 +3,19 @@
 
 }
 
+h1{
+	font-weight: bold;
+	font-size: 40px;
+}
+
 img{
 
 	float:left;
 }
 
-#content{
-
-	/*width:300px;*/
+div#content{
+	/*background-color: blue;*/
+	width:50%;
 }
 
 button {

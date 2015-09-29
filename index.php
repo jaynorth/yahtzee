@@ -10,14 +10,16 @@
 </head>
 
 <body >
+
+
 <h1>Yahtzee Project</h1>
 <form>
 	<input type="button" id="rollButton" value="Roll">
 </form>
-
-
-
 	<div id="content" class="float">
+
+	<p>get ready to play</p>
+
 		<script src="js/yahtzee.js"></script>
 	</div>
 	<div id="analysis" class="float">

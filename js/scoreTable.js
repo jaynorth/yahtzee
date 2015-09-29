@@ -8,14 +8,20 @@ var scoreCounter= 0; //max 13, ends at 13
 function showMouseover(id, num){
     //alert(id);
     var b= document.getElementById(id);
-    b.innerHTML = sumForNum(results, num);
+    if (score[id]==undefined && Counter>0){
+        b.innerHTML = sumForNum(results, num);
+    }
 
 
 }
 
 function showMouseOut(id){
     var b= document.getElementById(id);
-    b.innerHTML = "";
+    if (score[id]==undefined){
+        b.innerHTML = ''
+    }else{
+    b.innerHTML = score[id];
+    }
 
 }
 
@@ -32,18 +38,21 @@ function sumForNum(results, number){
     }
 
 function addToScore(id, num){
-console.log('Adding to Score');
-var points = sumForNum(results, num);
-score[id]=points;
-console.log(score);
-console.log(id);
-document.getElementById(id).innerHTML = points;
+    if (Counter>0){
+    console.log('Adding to Score');
+    //console.log('Counter is ' + Counter);
+    var points = sumForNum(results, num);
+    score[id]=points;
+    console.log(score);
+    console.log(id);
+    document.getElementById(id).innerHTML = points;
 
-scoreCounter++;
 
-console.log(scoreCounter);
-reset();
+    scoreCounter++;
 
+    console.log(scoreCounter);
+    reset();
+    }
 }
 
 function reset(){
@@ -54,7 +63,7 @@ function reset(){
     clickButton.type ="button"  ;
     results =[0, 0, 0, 0, 0, 0];
     hold = [false, false, false, false, false, false];
-    document.getElementById('content').innerHTML = '';
+    document.getElementById('content').innerHTML = 'roll the dice';
     
 
 }

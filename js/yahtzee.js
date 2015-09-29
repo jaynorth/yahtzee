@@ -41,7 +41,7 @@ function showResults(results, hold){
 	for (var i=1; i<6; i++){
 		//message += "Die " + i + 
 		message += "<div class='box'>";
-		message += "  <img src='img/" + results[i] + ".png' height=50 />";
+		message += "  <img src='img/" + results[i] + ".png' height=60 />";
 		if (hold[i]==false && Counter<3 ){
 			//var status = true;
 			message += "<button id='" + i + "' onclick='keep("+ i +", true)' >Hold?</button>"; 
