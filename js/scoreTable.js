@@ -92,6 +92,7 @@ console.log('checking occurences');
 
 function checkDiceHand(object){
     console.log('check dice hand');
+    var CurrentDiceHand ={};//object that will store all results variables in here
     var fullHouse=0;
     var straightCheck=0;
     var threeOfaKind=0;
@@ -111,17 +112,20 @@ function checkDiceHand(object){
         if (value==5){
             console.log('yahtzee');
             Yahtzee=1;
-            break;
+            CurrentDiceHand.yahtzee=true;
+            //break;
         }
         if (value==4){
             console.log('four of a kind');
             fourOfaKind=1;
-            break;
+            CurrentDiceHand.fourkind=true;
+            //break;
         }
         if (value==3){
             console.log('Three of a kind');
             fullHouse +=1;
             threeOfaKind+=1;
+            CurrentDiceHand.threekind=true;
         }
         if (value==2){
             console.log('Pair');
@@ -144,6 +148,7 @@ function checkDiceHand(object){
 
     if (fullHouse==2){
         console.log('full House');
+        CurrentDiceHand.fullhouse=true;
     }
 
     if (straightCheck==5){
@@ -154,8 +159,10 @@ function checkDiceHand(object){
         var b = keyList[4];
         if (b == a+4){
             console.log('It is a Big Straight !!!!');
+            CurrentDiceHand.bigstraight=true;
         }else if (keyList.toString()==[1, 2, 3, 4, 6 ].toString() || keyList.toString()===[1, 3, 4, 5, 6].toString() ){ //had to convert both to string to make it work, don't know why??
             console.log('We got a small straight, no pair!!!');
+            CurrentDiceHand.smallstraight=true;
         }else{
             console.log('We got no small straight with no pair!');
         }
@@ -166,14 +173,17 @@ function checkDiceHand(object){
         console.log('checking for small straight with a pair');
         if (keyList.toString()==[1, 2, 3, 4].toString() || keyList.toString()===[2, 3, 4, 5].toString() || keyList.toString()===[3, 4, 5, 6].toString() ){
             console.log('We got a small straight with a pair!!!');
+            CurrentDiceHand.smallstraight=true;
         }else{
             console.log('We got no small straight with a pair!');
         }
 
     }
 
-    
-
+    console.log('Now displaying Current DiceHand object');
+    console.log(CurrentDiceHand);
+    //console.log(CurrentDiceHand.fourkind);
+    return CurrentDiceHand;
 
 };
 
