@@ -75,7 +75,7 @@ function reset(){
 function checkOccurence(array){
     var occurences = {};
 console.log('checking occurences');
-    for (var i=0; i<array.length; i++){
+    for (var i=1; i<array.length; i++){//changed i=0 to i=1 to remove the 0 value in the object
         
        if (occurences[array[i]]){
         occurences[array[i]]++;
@@ -84,6 +84,7 @@ console.log('checking occurences');
        }      
     }
     console.log(occurences);
+
     //return occurences;
     checkDiceHand(occurences);
 }
@@ -114,17 +115,23 @@ function checkDiceHand(object){
             console.log('Pair');
             fullHouse +=1;
         }
-         if (value==1){
-            console.log('Possible straight');
+         if (value==1 ){
+            //console.log('Possible straight');
             fullHouse -=1;
             straightCheck +=1;
         }
+
+       
+
 
 
     }
 
     if (fullHouse==2){
-        console.log('fullhouse');
+        console.log('full House');
+    }
+    if (straightCheck==5){
+        console.log('possible straight');
     }
 
 
