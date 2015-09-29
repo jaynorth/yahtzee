@@ -59,6 +59,8 @@ function showResults(results, hold){
 	//analysing(results);//function is in alaysis.js
 
 
+
+
 }
 
 function keep(i, status){
@@ -79,6 +81,7 @@ function keep(i, status){
 clickButton.onclick = function (){
 	Roll(results, hold);
 	showResults(results, hold);
+	checkOccurence(results);
 	
 }
 

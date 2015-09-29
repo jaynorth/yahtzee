@@ -70,24 +70,63 @@ function reset(){
 
 
 
-var occurence = [0,6,7,4,4,4,3,2,2,1,4];
+
 
 function checkOccurence(array){
-    var obj = {};
+    var occurences = {};
 console.log('checking occurences');
-
-for (var i=0; i<array.length; i++){
-    
-   if (obj[array[i]]){
-    obj[array[i]]++;
-   } else {
-      obj[array[i]] = 1;
-   } 
-  
-}
-console.log(obj);
-
-
+    for (var i=0; i<array.length; i++){
+        
+       if (occurences[array[i]]){
+        occurences[array[i]]++;
+       } else {
+          occurences[array[i]] = 1;
+       }      
+    }
+    console.log(occurences);
+    //return occurences;
+    checkDiceHand(occurences);
 }
 
-checkOccurence(occurence);
+
+function checkDiceHand(object){
+    console.log('check dice hand');
+    var fullHouse=0;
+    var straightCheck=0;
+
+    for (var key in object){
+
+        var value = object[key];
+        console.log(key + ': ' +value);
+        if (value==5){
+            console.log('yahtzee');
+            break;
+        }
+        if (value==4){
+            console.log('four of a kind');
+            break;
+        }
+        if (value==3){
+            console.log('Three of a kind');
+            fullHouse +=1;
+        }
+        if (value==2){
+            console.log('Pair');
+            fullHouse +=1;
+        }
+         if (value==1){
+            console.log('Possible straight');
+            fullHouse -=1;
+            straightCheck +=1;
+        }
+
+
+    }
+
+    if (fullHouse==2){
+        console.log('fullhouse');
+    }
+
+
+};
+
