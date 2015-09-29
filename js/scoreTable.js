@@ -100,7 +100,7 @@ function checkDiceHand(object){
     var keyList=[];
 
     for (var key in object){
-        keyList.push(key);
+        keyList.push([key]);
         var value = object[key];
         console.log(key + ': ' +value);
 
@@ -141,9 +141,19 @@ function checkDiceHand(object){
     if (fullHouse==2){
         console.log('full House');
     }
-    if (straightCheck>=3 || keyList==[2, 3, 4, 5] || keyList==[1, 2, 3, 4] || keyList==[3, 4, 5, 6] ){
-        console.log('SMALL STRAIGHT : ' + keyList);
-    }
+  
+        console.log('straight check small straight possible');
+        arr1= [2, 3, 4, 5];
+        arr2= [1, 2, 3, 4];
+        arr3= [3, 4, 5, 6];
+        console.log(arr1);
+        if(keyList===arr1 || keyList===arr2 || keyList===arr3){
+            console.log('SMALL STRAIGHT!!!!!!!!!!!! : ' + keyList);
+        }
+
+     
+        
+    
     if (straightCheck==5 ){
         console.log('BIG STRAIGHT : ' + keyList);
     }
